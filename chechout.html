@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  
+</head>
+<body>
+    <div class="container">
+        <div class="py-5 text-center">
+            <h1>Checkout Form</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <!-- billing address section -->
+                <h4>Billing address</h4>
+                <form class="needs-validation" novalidate>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control" name="firstname" required>
+                            
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control" name="lastname" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" name="email" required>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10 mb-3">
+                            <label for="address">Address</label>
+                            <input type="text" name="address" class="form-control" id="address" required>
+                        </div>
+                        <div class="col-md-2 mb-3">
+                            <label for="address2">APT</label>
+                            <input type="text" name="apt" id="apt" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label for="city">City</label>
+                            <input type="text" name="city" class="form-control" required>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="state">State</label>
+                            <select class="custom-select d-block w-100" name="state" id="state" required>
+                                <option value>Choose..</option>
+                                <option value="New York">New York</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="zip">Zip</label>
+                           <input type="text" name="zip" class="form-control" maxlength="5" minlength="5"  required>
+                        </div>
+                    </div>
+                    <hr class="mb-3">
+
+                    <!-- same address checkbox -->
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <input type="checkbox" name="same-address" id="same-address" class="same_address">
+                          </div>
+                        </div>
+                        <span class="form-control">Shipping address is the same as my billing address</span>
+                    </div>
+                    
+                    <hr class="mb-3">
+
+                    <!-- shipping address section -->
+                    <div id="shipping_address" class="shipping_address">
+                        <h4>Shipping address</h4>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="shipping_firstName">First Name</label>
+                                <input type="text" class="form-control" name="shipping_firstname" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" class="form-control" name="shipping_lastname" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-10 mb-3">
+                                <label for="address">Address</label>
+                                <input type="text" name="shipping_address" class="form-control" id="shipping_address" required>
+                            </div>
+                            <div class="col-md-2 mb-3">
+                                <label for="apt">APT</label>
+                                <input type="text" name="shipping_apt" id="shipping_apt" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <label for="city">City</label>
+                                <input type="text" name="shipping_city" class="form-control" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="state">State</label>
+                                <select class="custom-select d-block w-100" name="shipping_state" id="shipping_state" required>
+                                    <option value>Choose..</option>
+                                    <option value="New York">New York</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="zip">Zip</label>
+                                <input type="text" name="shipping_zip" class="form-control" maxlength="5" minlength="5"  required>
+                            </div>
+                        </div>
+                        <hr class="mb-3">
+                    </div>
+
+                    <!-- payment section -->
+                    <h4 class="mb-3">Payment</h4>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                            <input type="radio" id="credit-card" name="payment" value="credit-card" checked>
+                            </div>
+                        </div>
+                        <span class="form-control">Credit card</span>
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                            <input type="radio" id="debit-card" name="payment" value="debit-card" >
+                            </div>
+                        </div>
+                        <span class="form-control">Debit card</span>
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                            <input type="radio" id="Paypal" name="payment" value="Paypal" >
+                            </div>
+                        </div>
+                        <span class="form-control">Paypal</span>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="card-name">Name On Card</label>
+                            <input type="text" class="form-control"  name="name-on-card" id="name-on-card" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="card-num">Credit card number</label>
+                            <input type="text" class="form-control" name="num-on-card" id="num-on-card" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 mb-3">
+                            <label for="Expiration">
+                                Expiration
+                            </label>
+                            <input type="text" class="form-control" name="expiration" required>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="CVV">
+                                CVV
+                            </label>
+                            <input type="text" class="form-control" name="cvv" maxlength="3" minlength="3" required>
+                        </div>
+                    </div>
+                    <hr class="mb-3">
+                    <button id="checkout" type="button" class="btn btn-success btn-lg form-control">Checkout</button>
+                </form>
+            </div>
+
+            <!-- shopping cart section -->
+            <div class="col-md-4">
+                <h4 class="d-flex justify-content-between mb-3">
+                    <span >Shopping Cart</span>
+                
+                    <span class="badge badge-info">5</span>
+                </h4>
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between">
+                        <div>
+                            <h5 class="my-0"> Apple </h5>
+                            <small class="text-primary">2 lbs</small>
+                        </div>    
+                        <p class="font-italic">$5</p> 
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <div>
+                            <h5 class="my-0"> Banana</h5>
+                            <small class="text-info">3 lbs</small>
+                        </div>    
+                        <p class="font-italic">$3</p> 
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <div>
+                            <h5 class="my-0"> Orange</h5>
+                            <small class="text-info">10 lbs</small>
+                            <p><small class="text-danger">20% off</small></p>
+                        </div>    
+                        <div class="my-1">
+                            <p class="font-italic text-danger"> <strike> $30</strike> </p> 
+                            <p class="font-italic">$24</p> 
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between text-success">
+                        <div>
+                            <h5 class="my-0">Total Saved: </h5>
+                        </div>    
+                        <p class="font-weight-bolder">$6</p> 
+                    </li>
+                </ul>
+                <form>
+                    <div class="input-group">
+                        <input type="text" name="code" id="code" class="form-control">
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-info">
+                                Redeem Coupon
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+
+      // same address checkbox function: If the checkbox “Shipping address is the same as my billing address” is clicked, the shipping address section will be hidden. 
+      $('.same_address').click(function () {
+          if ($(this).is(':checked')) {
+              $('#shipping_address').hide(1000);
+          } else {
+              $('#shipping_address').show(1000);
+          }
+      })
+
+    //   change the form class 'needs-validation' to 'was-validated' when click the checkout button
+      $('#checkout').click(function () {
+          $('.needs-validation').toggleClass('needs-validation was-validated');
+      })
+
+    })
+</script>
+
+</html>
