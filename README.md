@@ -1,1 +1,1 @@
-# checkout-form
+# Using bootstrap to create a checkout-form
